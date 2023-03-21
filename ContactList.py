@@ -63,15 +63,10 @@ def create_contact_sheet(folder):
             draw.text((x + (375 - label_width) / 2, y + 330), label, fill=(0, 0, 0), font=font)
         font = ImageFont.truetype("arial.ttf", 50)
         draw.text((width/2 -150, 0)," UnIndentified", fill=(0, 0, 0), font=font)
-        contact_sheet.save(os.path.join("D:/GIIS ClassWise 2.2.23//Contact List UnIdentified", f"{parent_folder_name} - Sheet %d.jpg" % (page + 1)))
-        #contact_sheet.save(os.path.join("D:/GIIS ClassWise 2.2.23//ContactList", " - Sheet %d.jpg" % (page + 1)))
+        contact_sheet.save(os.path.join("ENTER DESTINATION HERE - Sheet %d.jpg" % (page + 1)))
         print(parent_folder_name +" Done")
 
-root_dir = 'D:/GIIS ClassWise 2.2.23//ClassWise'
-#create_contact_sheet("D:/GIIS ClassWise 2.2.23//All")
-for subdir, dirs, files in os.walk(root_dir):
-    for dir in dirs:
-        if dir == 'Unpaid':
-            paid_dir = os.path.join(subdir, dir)
-            create_contact_sheet(paid_dir)
+
+create_contact_sheet("ENTER SOURCE FOLDER HERE, HAS TO BE A FOLDER NOT A FILE")
+
 
